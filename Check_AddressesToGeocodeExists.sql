@@ -1,0 +1,5 @@
+SELECT
+    CASE
+        WHEN EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'Addresses_toGeocode') THEN 1
+        ELSE 0
+    END [Result]
